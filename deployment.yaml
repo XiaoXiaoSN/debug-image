@@ -15,18 +15,26 @@ spec:
         app: debug-image
     spec:
       containers:
-      - image: debug-image
+      - image: ghcr.io/xiaoxiaosn/debug-image:latest
         name: debug-image
         command:
           - sleep
-          - "86400"
+          - infinity
         resources:
           requests:
-            cpu: 10m
-            memory: 10Mi
+            cpu: "0"
+            memory: "0"
           limits:
             cpu: 200m
             memory: 512Mi
+        volumeMounts:
+          - name: host
+            mountPath: /host
         securityContext:
+          privileged: true
           allowPrivilegeEscalation: true
           runAsUser: 0
+      volumes:
+        - name: host
+          hostPath:
+            path: /

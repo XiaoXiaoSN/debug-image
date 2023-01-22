@@ -69,6 +69,10 @@ RUN curl -L https://github.com/bitnami-labs/sealed-secrets/releases/download/v${
 # Install other useful tools
 RUN apk add --update --no-cache \
     curl \
-    grep
+    grep \
+    tcpdump
+
+ENV ENV=/root/.ashrc
+COPY ashrc /root/.ashrc
 
 WORKDIR /apps

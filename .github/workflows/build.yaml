@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: xiaoxiaosn/debug-image # ${{ github.repository }}
-  PLATFORMS: linux/amd64,linux/arm64,aarch64/amd64,aarch64/arm64
+  PLATFORMS: linux/amd64,linux/arm64
 
 jobs:
   build-and-push-image:

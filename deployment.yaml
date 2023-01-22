@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: debug-image
+  labels:
+    app: debug-image
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debug-image
+  template:
+    metadata:
+      labels:
+        app: debug-image
+    spec:
+      containers:
+      - image: debug-image
+        name: debug-image
+        command:
+          - sleep
+          - "86400"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10Mi
+          limits:
+            cpu: 200m
+            memory: 512Mi
+        securityContext:
+          allowPrivilegeEscalation: true
+          runAsUser: 0

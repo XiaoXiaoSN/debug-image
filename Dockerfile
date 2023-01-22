@@ -6,6 +6,7 @@ ARG HELM_VERSION=3.11.0
 ARG KUBECTL_VERSION=v1.26.1
 ARG KUSTOMIZE_VERSION=v4.5.7
 ARG KUBESEAL_VERSION=0.19.4
+ARG TARGETARCH
 
 # Install helm (latest release)
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"

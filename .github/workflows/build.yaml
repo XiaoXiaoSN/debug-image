@@ -9,7 +9,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: xiaoxiaosn/debug-image # ${{ github.repository }}
-  PLATFORMS: linux/amd64,linux/arm64
+  PLATFORMS: linux/amd64,linux/arm64,aarch64/amd64,aarch64/arm64
 
 jobs:
   build-and-push-image:
@@ -62,3 +62,4 @@ jobs:
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build.outputs.Digest }}" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY

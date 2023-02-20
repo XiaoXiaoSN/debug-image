@@ -58,8 +58,7 @@ jobs:
 
       - name: Generate build summary
         run: |
-          echo "# Container image output" >> $GITHUB_STEP_SUMMARY
-          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-          echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ steps.build.outputs.Digest }}" >> $GITHUB_STEP_SUMMARY
-          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-          echo "tags: ${{ steps.meta.outputs.tags }}" >> $GITHUB_STEP_SUMMARY
+          echo '# Published Image Tags :rocket:
+          ```
+          ${{ steps.meta.outputs.tags }}
+          ```' >> $GITHUB_STEP_SUMMARY

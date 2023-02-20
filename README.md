@@ -8,7 +8,7 @@ Image: `ghcr.io/xiaoxiaosn/debug-image`
 
 Install debug image as deployment:
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/XiaoXiaoSN/debug-image/master/deployment.yaml
+kubectl apply -f https://raw.githubusercontent.com/XiaoXiaoSN/debug-image/main/deployment.yaml
 ```
 
 ## Reference

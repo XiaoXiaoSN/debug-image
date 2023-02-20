@@ -70,6 +70,7 @@ RUN curl -L https://github.com/bitnami-labs/sealed-secrets/releases/download/v${
 RUN apk add --update --no-cache \
     curl \
     grep \
+    tar \
     tcpdump
 
 ENV ENV=/root/.ashrc

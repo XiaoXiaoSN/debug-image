@@ -20,7 +20,8 @@ RUN apk add --update --no-cache \
     grep \
     tar \
     tcpdump \
-    jq
+    jq \
+    postgresql-client
 
 # Install helm (latest release)
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"

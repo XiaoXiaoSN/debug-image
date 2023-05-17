@@ -8,6 +8,8 @@ ARG TARGETARCH
 
 ARG WITH_EKS
 
+ARG BUILD_TIME
+
 # Install useful tools
 RUN apk add --update --no-cache \
     bash \
@@ -68,5 +70,7 @@ RUN curl -L https://github.com/bitnami-labs/sealed-secrets/releases/download/v${
 
 ENV ENV=/root/.ashrc
 COPY ashrc /root/.ashrc
+
+ENV BUILD_TIME=${BUILD_TIME}
 
 WORKDIR /apps

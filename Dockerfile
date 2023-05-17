@@ -11,6 +11,7 @@ ARG WITH_EKS
 # Install useful tools
 RUN apk add --update --no-cache \
     bash \
+    bind-tools \
     ca-certificates \
     curl \
     gettext \

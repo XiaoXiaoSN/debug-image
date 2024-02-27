@@ -19,6 +19,8 @@ RUN apk add --update --no-cache \
     gettext \
     git \
     grep \
+    iptables \
+    nftables \
     tar \
     tcpdump \
     jq

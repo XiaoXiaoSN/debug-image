@@ -1,9 +1,9 @@
 FROM alpine:3
 
-ARG HELM_VERSION=3.12.0
-ARG KUBECTL_VERSION=v1.27.1
-ARG KUSTOMIZE_VERSION=v5.0.3
-ARG KUBESEAL_VERSION=0.21.0
+ARG HELM_VERSION=3.14.2
+ARG KUBECTL_VERSION=v1.29.2
+ARG KUSTOMIZE_VERSION=v5.3.0
+ARG KUBESEAL_VERSION=0.26.0
 ARG TARGETARCH
 
 ARG WITH_EKS
@@ -19,6 +19,8 @@ RUN apk add --update --no-cache \
     gettext \
     git \
     grep \
+    iptables \
+    nftables \
     tar \
     tcpdump \
     jq

@@ -1,5 +1,17 @@
 version: 2
+
 updates:
   - package-ecosystem: docker
+    directory: /
+    labels:
+      - dependency
+    schedule:
+      interval: monthly
+
   - package-ecosystem: github-actions
+    directory: /
+    labels:
+      - dependency
+    schedule:
+      interval: monthly
 

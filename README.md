@@ -6,9 +6,24 @@ Image: `ghcr.io/xiaoxiaosn/debug-image`
 
 ## Usage
 
-Install debug image as deployment:
+Install the debug image as a deployment:
+
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/XiaoXiaoSN/debug-image/main/deployment.yaml
+```
+
+Run the debug image as an Ephemeral containers:
+
+```bash
+kubectl debug -it $POD_NAME --image=ghcr.io/xiaoxiaosn/debug-image
+```
+
+### Tips
+
+Check the status of a specified port
+
+```bash
+nc -zv localhost 9000
 ```
 
 ### Installed tools

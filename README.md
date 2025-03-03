@@ -18,6 +18,11 @@ Run the debug image as an Ephemeral containers:
 kubectl debug -it $POD_NAME --image=ghcr.io/xiaoxiaosn/debug-image
 ```
 
+Run a debug pod directly:
+```bash
+kubectl run debug-image --restart='Never' --image=ghcr.io/xiaoxiaosn/debug-image --command -- sleep infinity
+```
+
 ### Tips
 
 Check the status of a specified port
